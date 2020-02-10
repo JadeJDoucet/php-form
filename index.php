@@ -34,4 +34,4 @@
     <input type="checkbox" name="tc" value="ok">
     I accept the T&amp;C<br />
         <input type="submit" name="submit" value="Register">
-</form>
+</form> 
