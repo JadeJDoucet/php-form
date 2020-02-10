@@ -1,8 +1,53 @@
 <?php
-    if (isset($_POST['searchterm'])) {
-        // htmlspecialchars is used to escape XSS
-        // ENT_QUOTES escapes single quotes
-        echo htmlspecialchars($_POST['searchterm'], ENT_QUOTES);
+    $name = '';
+    $password = '';
+    $gender = '';
+    $color = '';
+    $languages = [];
+    $comments = '';
+    $tc = '';
+
+    // On submit
+    if (isset($_POST['submit'])) {
+
+        // Check for values to be filled
+        if (isset($_POST['name'])) {
+            $name = $_POST['name'];
+        }
+        if (isset($_POST['password'])) {
+            $password = $_POST['password'];
+        }
+        if (isset($_POST['gender'])) {
+            $gender = $_POST['gender'];
+        }
+        if (isset($_POST['color'])) {
+            $color = $_POST['color'];
+        }
+        if (isset($_POST['languages'])) {
+            $languages = $_POST['languages'];
+        }
+        if (isset($_POST['comments'])) {
+            $comments = $_POST['comments'];
+        }
+        if (isset($_POST['tc'])) {
+            $tc = $_POST['tc'];
+        }
+
+        // Output
+        printf('Username: %s
+        <br>Password: %s
+        <br>Gender: %s
+        <br>Color: %s
+        <br>Language(s): %s
+        <br>Comments: %s
+        <br>T&amp;C: %s', 
+        htmlspecialchars($name, ENT_QUOTES),
+        htmlspecialchars($password, ENT_QUOTES),
+        htmlspecialchars($gender, ENT_QUOTES),
+        htmlspecialchars($color, ENT_QUOTES),
+        htmlspecialchars(implode(' ', $languages), ENT_QUOTES),
+        htmlspecialchars($comments, ENT_QUOTES),
+         htmlspecialchars($tc, ENT_QUOTES));
     }
 ?>
 
