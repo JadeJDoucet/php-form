@@ -23,13 +23,14 @@
             <option value="#0f0">Green</option>
             <option value="#00f">Blue</option>
         </select><br />
-    Languages spoken: 
+    Languages spoken: <br />
         <select name="languages[]" multiple size="3">
             <option value="en">English</option>
             <option value="fr">French</option>
             <option value="it">Italian</option>
-        </select><br>
-    Comments: <textarea name="comments"> <br>
+        </select><br />
+    Comments: <textarea name="comments"> </textarea>
+    <br>
     <input type="checkbox" name="tc" value="ok">
     I accept the T&amp;C<br>
         <input type="submit" value="Search">
