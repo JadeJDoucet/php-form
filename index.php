@@ -51,7 +51,7 @@
     }
 ?>
 
-<h1> Search Something </h1>
+<h1> Register </h1>
 <form
     action =""
     method="post">
