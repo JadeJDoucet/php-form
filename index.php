@@ -72,7 +72,9 @@
 <form
     action =""
     method="post">
-    Username: <input type="text" name="name">
+    Username: <input type="text" name="name" value="<?php
+        echo htmlspecialchars($name, ENT_QUOTES);
+    ?>">
     Password: <input type="password" name="password">
     Gender: 
         <input type="radio" name="gender" value="f"> Female
