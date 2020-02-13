@@ -74,7 +74,7 @@
     method="post">
     Username: <input type="text" name="name" value="<?php
         echo htmlspecialchars($name, ENT_QUOTES);
-    ?>">
+    ?>"><br />
     Password: <input type="password" name="password">
     Gender: 
         <input type="radio" name="gender" value="f"> Female
@@ -93,7 +93,9 @@
             <option value="fr">French</option>
             <option value="it">Italian</option>
         </select><br />
-    Comments: <textarea name="comments"> </textarea>
+    Comments: <textarea name="comments"><?php
+        echo htmlspecialchars($comments, ENT_QUOTES);
+    ?></textarea>
     <br />
     <input type="checkbox" name="tc" value="ok">
     I accept the T&amp;C<br />
