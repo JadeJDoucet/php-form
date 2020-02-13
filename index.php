@@ -9,6 +9,7 @@
 
     // On submit
     if (isset($_POST['submit'])) {
+        $ok = true;
 
         // Check for values to be filled
         if (isset($_POST['name'])) {
@@ -34,20 +35,22 @@
         }
 
         // Output
-        printf('Username: %s
-        <br>Password: %s
-        <br>Gender: %s
-        <br>Color: %s
-        <br>Language(s): %s
-        <br>Comments: %s
-        <br>T&amp;C: %s', 
-        htmlspecialchars($name, ENT_QUOTES),
-        htmlspecialchars($password, ENT_QUOTES),
-        htmlspecialchars($gender, ENT_QUOTES),
-        htmlspecialchars($color, ENT_QUOTES),
-        htmlspecialchars(implode(' ', $languages), ENT_QUOTES),
-        htmlspecialchars($comments, ENT_QUOTES),
-         htmlspecialchars($tc, ENT_QUOTES));
+        if ($ok) {
+            printf('Username: %s
+            <br>Password: %s
+            <br>Gender: %s
+            <br>Color: %s
+            <br>Language(s): %s
+            <br>Comments: %s
+            <br>T&amp;C: %s', 
+            htmlspecialchars($name, ENT_QUOTES),
+            htmlspecialchars($password, ENT_QUOTES),
+            htmlspecialchars($gender, ENT_QUOTES),
+            htmlspecialchars($color, ENT_QUOTES),
+            htmlspecialchars(implode(' ', $languages), ENT_QUOTES),
+            htmlspecialchars($comments, ENT_QUOTES),
+            htmlspecialchars($tc, ENT_QUOTES));
+        }
     }
 ?>
 
