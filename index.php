@@ -37,7 +37,7 @@
         } else {
             $languages = $_POST['languages'];
         }
-        if (!isset($_POST['comments']) || $_POST['comments' === '']) {
+        if (!isset($_POST['comments']) || $_POST['comments'] === '') {
             $ok = false;
         } else {
             $comments = $_POST['comments'];
@@ -66,7 +66,7 @@
             htmlspecialchars($tc, ENT_QUOTES));
         }
         $Jade = new Person($name, $gender, $color);
-        greeting($name, $gender, $color);
+        greeting($Jade->user, $Jade->gender, $Jade->fav_color);
     }
 
     class Person {
