@@ -65,8 +65,8 @@
             htmlspecialchars($comments, ENT_QUOTES),
             htmlspecialchars($tc, ENT_QUOTES));
         }
-        $Jade = new Person($name, $gender, $color);
-        greeting($Jade->user, $Jade->gender, $Jade->fav_color);
+        $Jade = new Person($name, $gender, $color); // Create new Person object
+        greeting($Jade->user, $Jade->gender, $Jade->fav_color); // access Person object to invoke function
     }
 
     class Person {
