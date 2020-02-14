@@ -65,6 +65,31 @@
             htmlspecialchars($comments, ENT_QUOTES),
             htmlspecialchars($tc, ENT_QUOTES));
         }
+        $Jade = new Person($name, $gender, $color);
+        greeting($name, $gender, $color);
+    }
+
+    class Person {
+        var $user;
+        var $gender;
+        var $fav_color;
+
+        function __construct($aUser, $aGender, $favColor){
+            $this->user = $aUser;
+            $this->gender = $aGender;
+            $this->fav_color = $favColor;
+            echo "User Created <br>";
+        }
+    }
+
+    function greeting($name, $gender, $color) {
+        $greetGender = "";
+        if ($gender === 'm') {
+            $greetGender = "Mr. ";
+        } elseif ($gender === 'f') {
+            $greetGender = 'Ms. ';
+        }
+        echo "<br><hr>Welcome $greetGender $name! <br> Your favorite color is $color";
     }
 ?>
 
